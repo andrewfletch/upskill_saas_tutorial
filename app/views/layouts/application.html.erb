@@ -31,7 +31,11 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-    
+    <div class="container">
+      <% flash.each do |type, msg| %> <!--function for contact us error message-->
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %> <!--div tag in rails with error message inside, then string interpolation-->
+      <% end %>
+    </div>  
     <%= yield %>
   </body>
 </html>

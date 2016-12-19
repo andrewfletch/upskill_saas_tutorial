@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
       flash[:success] = "Message sent."
       redirect_to new_contact_path
     else
-      flash[:error] = @contact.errors.full_messages.join(", ") #rails makes errors for the @contacts object in full messages separated by ", "
+      flash[:danger] = @contact.errors.full_messages.join(", ") #rails makes errors for the @contacts object in full messages separated by ", "
       redirect_to new_contact_path
     end
   end
