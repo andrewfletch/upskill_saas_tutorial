@@ -6,9 +6,11 @@ class ContactsController < ApplicationController
   def create #tell rails to save something
     @contact = Contact.new(contact_params) #takes the form input values and assigns them to the new object (mass assignment)
     if @contact.save
-      redirect_to new_contact_path, notice: "Message sent."
+      flash[:success] = "Message sent."
+      redirect_to new_contact_path
     else
-      redirect_to new_contact_path, notice: "Error occured."
+      flash[:error] = @contact.errors.full_messages.join(", ") #rails makes errors for the @contacts object in full messages separated by ", "
+      redirect_to new_contact_path
     end
   end
   
