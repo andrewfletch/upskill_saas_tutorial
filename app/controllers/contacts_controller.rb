@@ -6,6 +6,10 @@ class ContactsController < ApplicationController
   def create #tell rails to save something
     @contact = Contact.new(contact_params) #takes the form input values and assigns them to the new object (mass assignment)
     if @contact.save
+      name = params[:contact][:name]
+      email = params[:contact][:email]
+      body = params[:contact][:comments]
+      ContactMailer.contact_email(name, email, body).deliver
       flash[:success] = "Message sent."
       redirect_to new_contact_path
     else
