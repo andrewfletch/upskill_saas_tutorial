@@ -53,7 +53,7 @@ end
 
 group :production do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  #gem 'sqlite3'
   #Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
 end
