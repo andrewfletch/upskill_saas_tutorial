@@ -348,7 +348,6 @@ DEPENDENCIES
   bootstrap-sass (= 3.3.7)
   byebug
   coffee-rails (= 4.2.1)
-  devise (= 4.0.0)
   figaro (= 1.1.1)
   font-awesome-sass (= 4.6.2)
   hirb (= 0.7.3)
