@@ -38,7 +38,7 @@ gem 'font-awesome-sass', '4.6.2'
 gem 'hirb', '0.7.3'
 
 # Use Devise for user authentication
-gem 'devise', '4.2.0'
+gem 'devise', '4.0.0'
 
 # Use Stripe for payment processing
 gem 'stripe', '1.48.0'
@@ -46,10 +46,17 @@ gem 'stripe', '1.48.0'
 # Use Figaro for ENV variables (hide api keys from github)
 gem 'figaro', '1.1.1'
 
+# Use spree for ecommerce
+gem 'spree', '~> 3.2.0.rc1'
+gem 'spree_auth_devise', '~> 3.2.0.beta'
+gem 'spree_gateway', '~> 3.2.0.beta'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
+
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
